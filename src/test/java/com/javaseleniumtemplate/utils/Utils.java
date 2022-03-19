@@ -1,15 +1,12 @@
 package com.javaseleniumtemplate.utils;
 
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileReader;
-import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 //import org.apache.commons.io.FileUtils;
 //import org.testng.ITestResult;
@@ -43,5 +40,27 @@ public class Utils {
         }
 
         return sb.toString();
+    }
+
+    public static List<String> getFileByLine(String filePath) {
+        BufferedReader br=null;
+        StringBuilder sb=null;
+        List<String> s = new ArrayList<>();
+        try {
+            br = new BufferedReader(new FileReader(filePath));
+            String line = br.readLine();
+
+            while (line != null) {
+                s.add(line);
+                line = br.readLine();
+            }
+
+            br.close();
+
+        }  catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return s;
     }
 }

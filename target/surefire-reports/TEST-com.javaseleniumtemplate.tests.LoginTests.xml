@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.javaseleniumtemplate.tests.LoginTests" time="12.661" tests="1" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="sun.desktop" value="gnome"/>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home/joao/Documents/Projects/2022-1-Bootcamp-Base2/target/test-classes:/home/joao/Documents/Projects/2022-1-Bootcamp-Base2/target/classes:/home/joao/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/3.141.59/selenium-chrome-driver-3.141.59.jar:/home/joao/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/3.141.59/selenium-remote-driver-3.141.59.jar:/home/joao/.m2/repository/net/bytebuddy/byte-buddy/1.8.15/byte-buddy-1.8.15.jar:/home/joao/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/home/joao/.m2/repository/com/google/guava/guava/25.0-jre/guava-25.0-jre.jar:/home/joao/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar:/home/joao/.m2/repository/org/checkerframework/checker-compat-qual/2.0.0/checker-compat-qual-2.0.0.jar:/home/joao/.m2/repository/com/google/errorprone/error_prone_annotations/2.1.3/error_prone_annotations-2.1.3.jar:/home/joao/.m2/repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar:/home/joao/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.jar:/home/joao/.m2/repository/com/squareup/okhttp3/okhttp/3.11.0/okhttp-3.11.0.jar:/home/joao/.m2/repository/com/squareup/okio/okio/1.14.0/okio-1.14.0.jar:/home/joao/.m2/repository/org/seleniumhq/selenium/selenium-java/3.141.59/selenium-java-3.141.59.jar:/home/joao/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/3.141.59/selenium-edge-driver-3.141.59.jar:/home/joao/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/3.141.59/selenium-firefox-driver-3.141.59.jar:/home/joao/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/3.141.59/selenium-ie-driver-3.141.59.jar:/home/joao/.m2/repository/org/seleniumhq/selenium/selenium-opera-driver/3.141.59/selenium-opera-driver-3.141.59.jar:/home/joao/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/3.141.59/selenium-safari-driver-3.141.59.jar:/home/joao/.m2/repository/org/seleniumhq/selenium/selenium-support/3.141.59/selenium-support-3.141.59.jar:/home/joao/.m2/repository/org/seleniumhq/selenium/selenium-api/3.141.59/selenium-api-3.141.59.jar:/home/joao/.m2/repository/junit/junit/4.13.1/junit-4.13.1.jar:/home/joao/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/joao/.m2/repository/org/apache/commons/commons-lang3/3.9/commons-lang3-3.9.jar:/home/joao/.m2/repository/commons-io/commons-io/1.3.2/commons-io-1.3.2.jar:"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value="America/Sao_Paulo"/>
+    <property name="user.country.format" value="BR"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Linux"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="/home/joao/Downloads/jdk1.8.0/jre/lib/amd64"/>
+    <property name="sun.java.command" value="/home/joao/Documents/Projects/2022-1-Bootcamp-Base2/target/surefire/surefirebooter1406703656777867825.jar /home/joao/Documents/Projects/2022-1-Bootcamp-Base2/target/surefire 2022-03-11T08-31-16_938-jvmRun1 surefire7087601728852535013tmp surefire_0110499087400928186tmp"/>
+    <property name="surefire.test.class.path" value="/home/joao/Documents/Projects/2022-1-Bootcamp-Base2/target/test-classes:/home/joao/Documents/Projects/2022-1-Bootcamp-Base2/target/classes:/home/joao/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/3.141.59/selenium-chrome-driver-3.141.59.jar:/home/joao/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/3.141.59/selenium-remote-driver-3.141.59.jar:/home/joao/.m2/repository/net/bytebuddy/byte-buddy/1.8.15/byte-buddy-1.8.15.jar:/home/joao/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/home/joao/.m2/repository/com/google/guava/guava/25.0-jre/guava-25.0-jre.jar:/home/joao/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar:/home/joao/.m2/repository/org/checkerframework/checker-compat-qual/2.0.0/checker-compat-qual-2.0.0.jar:/home/joao/.m2/repository/com/google/errorprone/error_prone_annotations/2.1.3/error_prone_annotations-2.1.3.jar:/home/joao/.m2/repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar:/home/joao/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.jar:/home/joao/.m2/repository/com/squareup/okhttp3/okhttp/3.11.0/okhttp-3.11.0.jar:/home/joao/.m2/repository/com/squareup/okio/okio/1.14.0/okio-1.14.0.jar:/home/joao/.m2/repository/org/seleniumhq/selenium/selenium-java/3.141.59/selenium-java-3.141.59.jar:/home/joao/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/3.141.59/selenium-edge-driver-3.141.59.jar:/home/joao/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/3.141.59/selenium-firefox-driver-3.141.59.jar:/home/joao/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/3.141.59/selenium-ie-driver-3.141.59.jar:/home/joao/.m2/repository/org/seleniumhq/selenium/selenium-opera-driver/3.141.59/selenium-opera-driver-3.141.59.jar:/home/joao/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/3.141.59/selenium-safari-driver-3.141.59.jar:/home/joao/.m2/repository/org/seleniumhq/selenium/selenium-support/3.141.59/selenium-support-3.141.59.jar:/home/joao/.m2/repository/org/seleniumhq/selenium/selenium-api/3.141.59/selenium-api-3.141.59.jar:/home/joao/.m2/repository/junit/junit/4.13.1/junit-4.13.1.jar:/home/joao/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/joao/.m2/repository/org/apache/commons/commons-lang3/3.9/commons-lang3-3.9.jar:/home/joao/.m2/repository/commons-io/commons-io/1.3.2/commons-io-1.3.2.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/joao"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="/home/joao/Downloads/jdk1.8.0/jre"/>
+    <property name="basedir" value="/home/joao/Documents/Projects/2022-1-Bootcamp-Base2"/>
+    <property name="file.separator" value="/"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="/home/joao/Documents/Projects/2022-1-Bootcamp-Base2/target/surefire/surefirebooter1406703656777867825.jar"/>
+    <property name="sun.boot.class.path" value="/home/joao/Downloads/jdk1.8.0/jre/lib/resources.jar:/home/joao/Downloads/jdk1.8.0/jre/lib/rt.jar:/home/joao/Downloads/jdk1.8.0/jre/lib/sunrsasign.jar:/home/joao/Downloads/jdk1.8.0/jre/lib/jsse.jar:/home/joao/Downloads/jdk1.8.0/jre/lib/jce.jar:/home/joao/Downloads/jdk1.8.0/jre/lib/charsets.jar:/home/joao/Downloads/jdk1.8.0/jre/lib/jfr.jar:/home/joao/Downloads/jdk1.8.0/jre/classes"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="1.8.0-b132"/>
+    <property name="user.name" value="joao"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="5.13.0-30-generic"/>
+    <property name="java.endorsed.dirs" value="/home/joao/Downloads/jdk1.8.0/jre/lib/endorsed"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="/home/joao/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="idea.version" value="2021.3.2"/>
+    <property name="java.version" value="1.8.0"/>
+    <property name="user.dir" value="/home/joao/Documents/Projects/2022-1-Bootcamp-Base2"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="user.language.format" value="pt"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.library.path" value="/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25.0-b70"/>
+    <property name="java.ext.dirs" value="/home/joao/Downloads/jdk1.8.0/jre/lib/ext:/usr/java/packages/lib/ext"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="52.0"/>
+  </properties>
+  <testcase name="efetuarLoginEmailInvalido" classname="com.javaseleniumtemplate.tests.LoginTests" time="12.572"/>
+</testsuite>

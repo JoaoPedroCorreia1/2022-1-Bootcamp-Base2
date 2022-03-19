@@ -1,12 +1,10 @@
 package com.javaseleniumtemplate;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.util.Properties;
 
 public class GlobalParameters {
+    public static String PROJECT_PATH;
     public static String BROWSER_DEFAULT;
     public static String EXECUTION;
     public static int TIMEOUT_DEFAULT;
@@ -29,11 +27,29 @@ public class GlobalParameters {
             e.printStackTrace();
         }
 
+        PROJECT_PATH = getProjectPath();
         BROWSER_DEFAULT = properties.getProperty("browser.default");
         EXECUTION = properties.getProperty("execution");
         TIMEOUT_DEFAULT = Integer.parseInt(properties.getProperty("timeout.default"));
         URL_DEFAULT = properties.getProperty("url.default");
-        DOWNLOAD_DEFAULT_PATH = properties.getProperty("download.defaul.path");
+        DOWNLOAD_DEFAULT_PATH =
+                PROJECT_PATH + properties.getProperty("download.default.path");
         SENHA_GERAL = properties.getProperty("senhaGeral");
     }
+
+    public static String getProjectPath() {
+        File directory = new File("./");
+
+        String projectPath = "";
+        try {
+            projectPath = directory.getCanonicalPath();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        directory.delete();
+
+        return projectPath;
+    }
+
 }
