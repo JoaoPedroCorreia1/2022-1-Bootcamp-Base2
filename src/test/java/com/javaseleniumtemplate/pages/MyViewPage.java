@@ -7,6 +7,7 @@ public class MyViewPage extends PageBase {
     //Mapping
     By logedInAsLabel = By.cssSelector("td.login-info-left > span.italic");
     By reportIssuesButton = By.linkText("Report Issue");
+    By viewIssuesButton = By.linkText("View Issues");
 
     By projectDropDownList = By.name("project_id");
     By projectSelectedOption = By.cssSelector("option[selected='selected']");
@@ -19,6 +20,10 @@ public class MyViewPage extends PageBase {
 
     public void clicarEmReportIssues() {
         click(reportIssuesButton);
+    }
+
+    public void clicarEmViewIssues() {
+        click(viewIssuesButton);
     }
 
     public void selecionarProject(String text) {
