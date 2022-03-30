@@ -10,6 +10,7 @@ public class GlobalParameters {
     public static int TIMEOUT_DEFAULT;
     public static String URL_DEFAULT;
     public static String DOWNLOAD_DEFAULT_PATH;
+    public static String RESOURCES_PATH;
     public static String SENHA_GERAL;
 
     private Properties properties;
@@ -34,6 +35,7 @@ public class GlobalParameters {
         URL_DEFAULT = properties.getProperty("url.default");
         DOWNLOAD_DEFAULT_PATH =
                 PROJECT_PATH + properties.getProperty("download.default.path");
+        RESOURCES_PATH = PROJECT_PATH + "/src/test/resources";
         SENHA_GERAL = properties.getProperty("senhaGeral");
     }
 

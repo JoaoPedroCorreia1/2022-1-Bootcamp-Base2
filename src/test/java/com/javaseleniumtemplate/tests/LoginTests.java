@@ -13,8 +13,7 @@ public class LoginTests extends TestBase {
 
     //Tests
     @Test
-    public void efetuarLoginUsuarioValido(){
-
+    public void efetuarLoginUsuarioValido() {
         //Objects instances
         loginPage = new LoginPage();
         myViewPage = new MyViewPage();

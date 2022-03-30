@@ -2,11 +2,13 @@ package com.javaseleniumtemplate.bases;
 
 import com.javaseleniumtemplate.GlobalParameters;
 import com.javaseleniumtemplate.utils.DriverUtils;
+import org.apache.commons.lang3.time.StopWatch;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.apache.commons.lang3.time.StopWatch;
+
+import java.util.List;
 
 public class PageBase {
     //Variaveis globlais
@@ -108,6 +110,22 @@ public class PageBase {
     protected String getValue(By locator){
         String text = waitForElement(locator).getAttribute("value");
         return text;
+    }
+
+    protected void clickButtonByOptions(By[] locators, List<String> options, String option) {
+        int op = options.indexOf(option);
+        if(op == -1)
+        {
+            return;
+        }
+        click(locators[op]);
+    }
+
+    protected void clickButtonIfOpcaoAtivado(By locator, String option) {
+        if(option.equalsIgnoreCase("ativado"))
+        {
+            click(locator);
+        }
     }
 
     //Default actions
