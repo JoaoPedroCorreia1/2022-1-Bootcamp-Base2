@@ -18,11 +18,17 @@ public class ProjectTests extends TestBase {
         loginFlows = new LoginFlows();
         myViewPage = new MyViewPage();
 
+        //Parameteres
+        String usuario = "joao.silva";
+        String senha = "09111999";
+
+        String projeto = "Daniella Maleski's Project";
+
         //Before
-        loginFlows.efetuarLogin("joao.silva", "09111999");
+        loginFlows.efetuarLogin(usuario, senha);
 
         //Test
-        myViewPage.selecionarProject("Daniella Maleski's Project");
+        myViewPage.selecionarProject(projeto);
         myViewPage.clicarNoBotaoSwitchProject();
 
         Assert.assertTrue(myViewPage.getProjetoSelecionado()

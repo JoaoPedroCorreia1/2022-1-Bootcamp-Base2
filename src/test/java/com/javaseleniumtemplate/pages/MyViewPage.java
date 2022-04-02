@@ -37,4 +37,8 @@ public class MyViewPage extends PageBase {
     public String getProjetoSelecionado() {
         return getText(projectSelectedOption);
     }
+
+    public void navegateToPage() {
+        navigateTo("https://mantis-prova.base2.com.br/my_view_page.php");
+    }
 }
