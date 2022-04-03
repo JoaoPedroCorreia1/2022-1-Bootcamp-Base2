@@ -16,3 +16,5 @@ e as melhores práticas de código e versionamento.
   - Trocar de Projeto com Sucesso
 - View Tests
   - Localizar Issue e Visualizar Dados da Issue com Sucesso
+- Issue Change Status Tests
+  - Mudar de Estado de Assigned até Closed com Note Message com Sucesso
