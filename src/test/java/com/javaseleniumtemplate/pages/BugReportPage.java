@@ -118,7 +118,7 @@ public class BugReportPage extends PageBase {
 
     public int getIssueId() {
         String idMessage = getText(issueIdMessage);
-        idMessage.replace("View Submitted Issue ", "");
+        idMessage = idMessage.replace("View Submitted Issue ", "");
 
         int id = Integer.parseInt(idMessage);
 

@@ -61,8 +61,6 @@ public class ViewPage extends PageBase {
             "tr[class='bugnote']:nth-child(10) > td[class='bugnote-note-public']");
     By sixthNote = By.cssSelector(
             "tr[class='bugnote']:nth-child(12) > td[class='bugnote-note-public']");
-    By seventhNote = By.cssSelector(
-            "tr[class='bugnote']:nth-child(14) > td[class='bugnote-note-public']");
 
     //Actions
     //first block
@@ -193,9 +191,5 @@ public class ViewPage extends PageBase {
 
     public String getSixthNote() {
         return getText(sixthNote);
-    }
-
-    public String getSeventhNote() {
-        return getText(seventhNote);
     }
 }

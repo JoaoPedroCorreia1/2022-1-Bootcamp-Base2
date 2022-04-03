@@ -1,17 +1,19 @@
 package com.javaseleniumtemplate.tests;
 
+import com.javaseleniumtemplate.bases.TestBase;
 import com.javaseleniumtemplate.flows.BugReportFlows;
 import com.javaseleniumtemplate.flows.LoginFlows;
 import com.javaseleniumtemplate.flows.ViewAllBugsFlows;
 import com.javaseleniumtemplate.pages.BugChangeStatusPage;
 import com.javaseleniumtemplate.pages.MyViewPage;
 import com.javaseleniumtemplate.pages.ViewPage;
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.List;
 
-public class IssueChangeStatusTests {
+public class IssueChangeStatusTests extends TestBase {
     //Objects
     LoginFlows loginFlows;
     BugReportFlows bugReportFlows;
@@ -22,7 +24,7 @@ public class IssueChangeStatusTests {
     BugChangeStatusPage bugChangeStatusPage;
 
     @Test
-    public void mudarDeEstadoDeAssignedAteClosedComMensagemComSucesso() {
+    public void mudarDeEstadoDeAssignedAteClosedComNoteMessageComSucesso() {
         //Massa de dados
         List<String> changeStatusIssue = Arrays.asList(
                 "Daniella Maleski's Project",
@@ -58,13 +60,19 @@ public class IssueChangeStatusTests {
         String usuario = "joao.silva";
         String senha = "09111999";
 
-        String newMensagem = "Changed status to new";
-        String feedbackMensagem = "Changed status to feedback";
-        String acknowledgedMensagem = "Changed status to acknowledged";
-        String confirmedMensagem = "Changed status to confirmed";
-        String assignedMensagem = "Changed status to assigned";
-        String resolvedMensagem = "Changed status to resolved";
-        String closedMensagem = "Changed status to closed";
+        String newStatus = "new";
+        String feedbackStatus = "feedback";
+        String acknowledgedStatus = "acknowledged";
+        String confirmedStatus = "confirmed";
+        String resolvedStatus = "resolved";
+        String closedStatus = "closed";
+
+        String newNoteMessage = "Changed status to new";
+        String feedbackNoteMessage = "Changed status to feedback";
+        String acknowledgedNoteMessage = "Changed status to acknowledged";
+        String confirmedNoteMessage = "Changed status to confirmed";
+        String resolvedNoteMessage = "Changed status to resolved";
+        String closedNoteMessage = "Changed status to closed";
 
         //Before
         loginFlows.efetuarLogin(usuario, senha);
@@ -75,5 +83,43 @@ public class IssueChangeStatusTests {
         viewAllBugsFlows.localizarIssue(String.valueOf(issueId));
 
         //Test
+        viewPage.selecionarNovoStatus(newStatus);
+        viewPage.clicarEmMudarDeEstado();
+        bugChangeStatusPage.preencherAdicionarNota(newNoteMessage);
+        bugChangeStatusPage.clicarNoBotaoNewIssue();
+
+        viewPage.selecionarNovoStatus(feedbackStatus);
+        viewPage.clicarEmMudarDeEstado();
+        bugChangeStatusPage.preencherAdicionarNota(feedbackNoteMessage);
+        bugChangeStatusPage.clicarNoBotaoRequestFeedback();
+
+        viewPage.selecionarNovoStatus(acknowledgedStatus);
+        viewPage.clicarEmMudarDeEstado();
+        bugChangeStatusPage.preencherAdicionarNota(acknowledgedNoteMessage);
+        bugChangeStatusPage.clicarNoBotaoAcknowledgeIssue();
+
+        viewPage.selecionarNovoStatus(confirmedStatus);
+        viewPage.clicarEmMudarDeEstado();
+        bugChangeStatusPage.preencherAdicionarNota(confirmedNoteMessage);
+        bugChangeStatusPage.clicarNoBotaoConfirmIssue();
+
+        viewPage.selecionarNovoStatus(resolvedStatus);
+        viewPage.clicarEmMudarDeEstado();
+        bugChangeStatusPage.preencherAdicionarNota(resolvedNoteMessage);
+        bugChangeStatusPage.clicarNoBotaoResolveIssue();
+
+        viewPage.selecionarNovoStatus(closedStatus);
+        viewPage.clicarEmMudarDeEstado();
+        bugChangeStatusPage.preencherAdicionarNota(closedNoteMessage);
+        bugChangeStatusPage.clicarNoBotaoCloseIssue();
+
+        Assert.assertTrue(viewPage.getStatus().equals(closedStatus));
+
+        Assert.assertTrue(viewPage.getFirstNote().equals(newNoteMessage));
+        Assert.assertTrue(viewPage.getSecondNote().equals(feedbackNoteMessage));
+        Assert.assertTrue(viewPage.getThirdNote().equals(acknowledgedNoteMessage));
+        Assert.assertTrue(viewPage.getFourthNote().equals(confirmedNoteMessage));
+        Assert.assertTrue(viewPage.getFifthNote().equals(resolvedNoteMessage));
+        Assert.assertTrue(viewPage.getSixthNote().equals(closedNoteMessage));
     }
 }

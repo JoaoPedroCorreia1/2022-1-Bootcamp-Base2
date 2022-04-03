@@ -35,7 +35,7 @@ public class ViewTests extends TestBase {
         String category = "[All Projects] Teste JoaoSilva";
         String viewStatus = "public";
         String dateSubmitted = "2022-03-29 15:01";
-        String lastUpdate = "2022-03-29 15:01";
+        String lastUpdate = "2022-04-03 00:31";
 
         String reporter = "joao.silva";
         String assignedTo = "joao.silva";
