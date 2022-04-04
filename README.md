@@ -13,7 +13,7 @@ e as melhores práticas de código e versionamento.
 open Terminal with the project directory and run:
 
 `` 
-mvn run
+mvn test
 ``
 ## Casos de Teste
 - Report Issue Tests
