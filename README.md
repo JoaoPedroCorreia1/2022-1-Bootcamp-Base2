@@ -1,9 +1,7 @@
 # 2022-1-Bootcamp-Base2
 ## Introdução
-Projeto Selenium (Java) feito com arquitetura Page Object Model 
-e as melhores práticas de código e versionamento. 
-- Escopo: principais funcionalidades do Mantis Bug Tracker; 
-- Critério de Saída: 5 Casos de teste.
+Projeto Selenium (Java) do Mantis Bug Tracker feito com arquitetura Page Object Model 
+e as melhores práticas de código e versionamento.
 
 ## Recursos
 - [Diagrama-Mantis-Casos De Uso](https://drive.google.com/file/d/1sgFZ6G8s58Gz-WSB7itK5ZEkZYF42SlA/view?usp=sharing)
