@@ -9,7 +9,13 @@ e as melhores práticas de código e versionamento.
 - [Diagrama-Mantis-Casos De Uso](https://drive.google.com/file/d/1sgFZ6G8s58Gz-WSB7itK5ZEkZYF42SlA/view?usp=sharing)
 - [Diagrama-Mantis-Flows](https://drive.google.com/file/d/1SV3YYstnlZQvQ_gVj3un_MAYKIM_on9t/view?usp=sharing)
 
-## Casos de Teste:
+## How to run
+open Terminal with the project directory and run:
+
+`` 
+mvn run
+``
+## Casos de Teste
 - Report Issue Tests
   - Criar Issue com Sucesso
 - Project Tests
@@ -18,3 +24,5 @@ e as melhores práticas de código e versionamento.
   - Localizar Issue e Visualizar Dados da Issue com Sucesso
 - Issue Change Status Tests
   - Mudar de Estado de Assigned até Closed com Note Message com Sucesso
+- Issue Edit Tests
+  - Editar Issue com Sucesso
