@@ -41,8 +41,8 @@ public class IssueChangeStatusTests extends TestBase {
                 "1. Open main page."
                 + "\n" + "2. Scroll to feature."
                 + "\n" + "3. Click on 'Go To Main Page' button.",
-                "Feature locks after clicking"
-                ,"/files/anexoExemplo.PNG",
+                "Feature locks after clicking",
+                "/files/anexoExemplo.PNG",
                 "public",
                 "desativado"
         );

@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 
 public class ViewPage extends PageBase {
     //Mapping
-    //first block
+    //ID block
     By issueProject = By.cssSelector(
             "table:nth-child(6) > tbody > tr:nth-child(3) > td:nth-child(2)");
     By issueCategory = By.cssSelector(
@@ -17,7 +17,7 @@ public class ViewPage extends PageBase {
     By issueLastUpdate = By.cssSelector(
             "table:nth-child(6) > tbody > tr:nth-child(3) > td:nth-child(6)");
 
-    //second block
+    //Reporter block
     By issueReporter = By.cssSelector(
             "table:nth-child(6) > tbody > tr:nth-child(5) > td:nth-child(2)");
     By issueAssignedTo = By.cssSelector(
@@ -31,24 +31,26 @@ public class ViewPage extends PageBase {
     By issueOS = By.cssSelector("tr:nth-child(9) > td:nth-child(4)");
     By issueOSVersion = By.cssSelector("tr:nth-child(9) > td:nth-child(6)");
 
-    //third block
+    //Summary block
     By issueSummary = By.cssSelector("tr:nth-child(11) > td:nth-child(2)");
     By issueDescription = By.cssSelector("tr:nth-child(12) > td:nth-child(2)");
     By issueStepsToReproduce = By.cssSelector("tr:nth-child(13) > td:nth-child(2)");
     By issueAdditionalInformation = By.cssSelector("tr:nth-child(14) > td:nth-child(2)");
     By issueTags = By.cssSelector("tr:nth-child(15) > td:nth-child(2)");
 
-    //fourth block
+    //Attached Files block
     By issueAttachedFiles = By.cssSelector("td:nth-child(2) > a:nth-child(2)");
+
+    By editButton = By.cssSelector("input[value='Edit']");
 
     By statusDropDownList = By.name("new_status");
     By changeStatusToButton = By.cssSelector("input[value='Change Status To:']");
 
-    //upload file
+    //Upload file block
     By chooseFileButton = By.name("ufile[]");
     By uploadFileButton = By.cssSelector("input[value='Upload File']");
 
-    //notes
+    //Notes
     By firstNote = By.cssSelector(
             "tr[class='bugnote']:nth-child(2) > td[class='bugnote-note-public']");
     By secondNote = By.cssSelector(
@@ -63,7 +65,7 @@ public class ViewPage extends PageBase {
             "tr[class='bugnote']:nth-child(12) > td[class='bugnote-note-public']");
 
     //Actions
-    //first block
+    //ID block
     public String getProject() {
         return getText(issueProject);
     }
@@ -84,7 +86,7 @@ public class ViewPage extends PageBase {
         return getText(issueLastUpdate);
     }
 
-    //second block
+    //Reporter block
     public String getReporter() {
         return getText(issueReporter);
     }
@@ -125,7 +127,7 @@ public class ViewPage extends PageBase {
         return getText(issueOSVersion);
     }
 
-    //third block
+    //Summary block
     public String getSummary() {
         return getText(issueSummary);
     }
@@ -146,9 +148,13 @@ public class ViewPage extends PageBase {
         return getText(issueTags);
     }
 
-    //fourth block
+    //Attached Files block
     public String getAttachedFiles() {
         return getText(issueAttachedFiles);
+    }
+
+    public void clicarEmEditar() {
+        click(editButton);
     }
 
     public void selecionarNovoStatus(String text) {
@@ -159,7 +165,7 @@ public class ViewPage extends PageBase {
         click(changeStatusToButton);
     }
 
-    //upload file
+    //Upload File block
     public void escolherArquivo(String filePath) {
         sendKeys(chooseFileButton, filePath);
     }
@@ -168,7 +174,7 @@ public class ViewPage extends PageBase {
         click(uploadFileButton);
     }
 
-    //notes
+    //Notes
     public String getFirstNote() {
         return getText(firstNote);
     }

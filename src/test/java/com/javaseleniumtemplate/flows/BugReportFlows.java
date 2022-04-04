@@ -30,7 +30,7 @@ public class BugReportFlows {
         bugReportPage.preencherSummary(issue.get(7));
         bugReportPage.preecherDescription(issue.get(8));
         bugReportPage.preecherStepsToReproduce(issue.get(9));
-        bugReportPage.preecherStepsToReproduce(issue.get(10));
+        bugReportPage.preecherAdditionalInformation(issue.get(10));
 
         bugReportPage.subirArquivo(issue.get(11));
 

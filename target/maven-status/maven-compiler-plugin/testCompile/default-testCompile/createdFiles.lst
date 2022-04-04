@@ -1,8 +1,8 @@
+com/javaseleniumtemplate/utils/DriverUtils.class
+com/javaseleniumtemplate/bases/TestBase.class
 com/javaseleniumtemplate/bases/PageBase.class
 com/javaseleniumtemplate/pages/LoginPage.class
-com/javaseleniumtemplate/utils/DriverUtils.class
 com/javaseleniumtemplate/utils/Utils.class
 com/javaseleniumtemplate/tests/LoginTests.class
 com/javaseleniumtemplate/GlobalParameters.class
-com/javaseleniumtemplate/bases/TestBase.class
 com/javaseleniumtemplate/flows/LoginFlows.class

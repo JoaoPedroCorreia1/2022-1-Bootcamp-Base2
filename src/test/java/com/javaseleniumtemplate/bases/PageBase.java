@@ -128,6 +128,10 @@ public class PageBase {
         }
     }
 
+    protected void clearKeys(By locator) {
+        waitForElement(locator).clear();
+    }
+
     //Default actions
     public void refresh(){
         DriverUtils.INSTANCE.navigate().refresh();
